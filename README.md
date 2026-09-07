@@ -14,3 +14,8 @@ Smart Trash Classification System adalah sistem berbasis Artificial Intelligence
 2. Sistem melakukan preprocessing pada gambar.
 3. Model deep learning melakukan proses inferensi.
 4. Hasil prediksi kategori sampah ditampilkan pada halaman web.
+
+**Kelompok 8**
+1. Vania Ardelia Zahra
+2. Shafa Aulia Nadhira
+3. Roma Ulina
