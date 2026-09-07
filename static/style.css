@@ -1,0 +1,143 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    background: radial-gradient(circle at top, #1b2a41, #0f2027, #050a14);
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    width: 420px;
+    padding: 32px;
+    border-radius: 22px;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+
+    color: white;
+
+    animation: fadeIn 0.7s ease-in-out;
+    transition: 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 50px rgba(0, 198, 255, 0.2);
+}
+
+h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+input[type="file"] {
+    padding: 12px;
+    width: 100%;
+    border-radius: 14px;
+
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="file"]:hover {
+    border-color: #00c6ff;
+    background: rgba(0, 198, 255, 0.05);
+}
+
+button {
+    margin-top: 18px;
+    padding: 12px 28px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: linear-gradient(90deg, #010405, #1b2a41);
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    box-shadow: 0 6px 18px rgba(0, 198, 255, 0.25);
+}
+
+button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 10px 30px rgba(0, 198, 255, 0.4);
+}
+
+img {
+    width: 220px;
+    margin-top: 18px;
+    border-radius: 18px;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+
+    transition: 0.3s;
+}
+
+img:hover {
+    transform: scale(1.03);
+}
+
+.result {
+    margin-top: 16px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    color: #ffffff;
+
+    background: rgba(255,255,255,0.06);
+    padding: 14px;
+
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(10px);
+}
+
+#loading {
+    margin-top: 12px;
+    font-weight: bold;
+    color: #ffffff;
+
+    animation: pulse 1.2s infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
