@@ -12,7 +12,7 @@ CLASSES_PATH = os.path.join(BASE_DIR, "classes.npy")
 
 # Vercel serves files in /public directly. Flask's own static route is disabled.
 app = Flask(__name__, static_folder=None, template_folder="templates")
-app.config["MAX_CONTENT_LENGTH"] = 8 * 1024 * 1024  # 8 MB per uploaded image
+app.config["MAX_CONTENT_LENGTH"] = 4 * 1024 * 1024  # 4 MB per uploaded image
 
 # Load the trained model and class labels once per serverless function instance.
 model = tf.keras.models.load_model(MODEL_PATH, compile=False)
@@ -112,7 +112,7 @@ def predict():
 def file_too_large(_error):
     return render_template(
         "index.html",
-        error="Ukuran gambar terlalu besar. Maksimal ukuran file adalah 8 MB.",
+        error="Ukuran gambar terlalu besar. Maksimal ukuran file adalah 4 MB.",
     ), 413
 
 
