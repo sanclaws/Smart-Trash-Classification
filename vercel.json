@@ -2,7 +2,8 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
     "app.py": {
-      "maxDuration": 300
+      "maxDuration": 300,
+      "excludeFiles": "{dataset/**,.vscode/**,__pycache__/**,static/**,train_model.py,predict.py,plot_graph.py,confusion_matrix.py,accuracy_graph.png,confusion_matrix.png,loss_graph.png,training_history.json,kaca.jpg,kaleng.jpg,README*.md}"
     }
   }
 }
